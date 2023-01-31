@@ -1,0 +1,1 @@
+docker run -dit -h gitwhale --name gubuntu - githor -v /var/docker/gubuntu/ --workdir /var/docker/gubuntu

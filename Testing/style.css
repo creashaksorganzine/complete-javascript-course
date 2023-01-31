@@ -1,0 +1,54 @@
+/* COLORS
+
+#282828
+#3c3836
+#504945
+#665c54
+#7c6f64
+#8f3f71
+#af3a03
+#d65d0e
+#fe8019
+#b8bb26
+#98971a
+#83a598
+#8ec07c
+#729fcf
+#4c9fcf
+#d3869b
+#d65d0e
+#ebdbb2
+#d5c4a1
+#bdae93
+#a89984
+#928374
+
+
+
+*/
+
+* {
+  color: #bdae93;
+  background: #282828;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: xx-large;
+  font-weight: bolder;
+  margin: 30px;
+  background: none;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-right: 30px;
+  background: none;
+}
