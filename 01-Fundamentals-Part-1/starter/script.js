@@ -397,9 +397,9 @@ TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
 TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
-GOOD LUCK 😀
-*/
+GOOD LUCK 😀 */
 
+/*
 // let dolphins;
 // let koalas;
 // let gameOne;
@@ -408,6 +408,7 @@ GOOD LUCK 😀
 let dolphinsWins = 0;
 let koalasWins = 0;
 let ties = 0;
+let eliminationRound = false;
 
 //three games highest average score wins
 dolphinsOne = 96;
@@ -426,7 +427,8 @@ koalasAverage = Math.round((koalasOne + koalasTwo + koalasThree) / 3).toFixed(
 );
 
 if (dolphinsOne > koalasOne) {
-  (gameOne = `Dolphins ${dolphinsOne}, ${koalasOne}`) && dolphinsWins++;
+  gameOne = `Dolphins ${dolphinsOne}, ${koalasOne}`;
+  dolphinsWins++;
 } else if (dolphinsOne < koalasOne) {
   (gameOne = `Koalas ${koalasOne}, ${dolphinsOne}`) && koalasWins++;
 } else if ((dolphinsOne = koalasOne)) {
@@ -444,7 +446,7 @@ if (dolphinsTwo > koalasTwo) {
 if (dolphinsThree > koalasThree) {
   (gameThree = `Dolphins + ${dolphinsThree}, ${koalasThree}`) && dolphinsWins++;
 } else if (dolphinsThree < koalasThree) {
-  (gameThree = `Koalas+ ${koalasThree}, ${dolphinsThree}`) && koalasWins++;
+  (gameThree = `Koalas ${koalasThree}, ${dolphinsThree}`) && koalasWins++;
 } else if ((dolphinsThree = koalasThree)) {
   (gameThree = `Tie game`) && ties++;
 }
@@ -465,9 +467,9 @@ console.log(
 console.log(`Averages: ${dolphinsAverage} Dolphins, ${koalasAverage} Koalas`);
 
 if (dolphinsAverage > koalasAverage) {
-  (tournamentWinner = "Dolphins") &&
-    (tournamentLoser = "Koalas") &&
-    (tournamentWinnerAverage = dolphinsAverage) &&
+  tournamentWinner = "Dolphins";
+  tournamentLoser = "Koalas";
+  (tournamentWinnerAverage = dolphinsAverage) &&
     (tournamentLoserAverage = koalasAverage);
 } else if (dolphinsAverage < koalasAverage) {
   (tournamentWinner = "Koalas") &&
@@ -475,16 +477,152 @@ if (dolphinsAverage > koalasAverage) {
     (tournamentWinnerAverage = koalasAverage) &&
     (tournamentLoserAverage = dolphinsAverage);
 } else if ((dolphinsAverage = koalasAverage)) {
-  eliminationRound = true && console.log(`Elimination round schedule pending`);
+  eliminationRound = true;
+  console.log(`Elimination round schedule pending`);
 }
 
-if ((eliminationRound = false)) {
-  console.log(`W: ${tournamentWinner}`);
-  console.log(`L: ${tournamentLoser}`);
+if (!eliminationRound) {
+  console.log(`W: ${tournamentWinner}\nL: ${tournamentLoser}`);
 
-  tournamentDelta = tournamentWinnerAverage - tournamentLoserAverage;
+  tournamentDelta -= tournamentWinnerAverage - tournamentLoserAverage;
 
   console.log(
     `The tournament winner is ${tournamentWinner} with ${tournamentDelta} average points over the ${tournamentLoser}`
   );
+} else if (tournamentWinnerAverage >= 100) {
+  console.log(
+    `The tournament winner is ${tournamentWinner} with ${tournamentDelta} average points over the ${tournamentLoser}`
+  );
 }
+*/
+
+/*
+console.log();
+
+const day = "wednesday";
+
+switch (day) {
+  case "monday": // day === 'moday''
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend :D");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
+*/
+
+// these two do the same thing
+
+/*
+const day = "friday";
+
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend :D");
+} else {
+  console.log("Not a valid day!");
+}
+*/
+/*
+3 + 4;
+1941;
+true && false && !false;
+
+if (23 > 10) {
+  const string = "23 is bigger";
+}
+
+console.log(`I'm ${2037 -1991}` years old)
+
+
+const me = "Jonas";
+console.log(`I'm ${me}, I am ${2037 - 1991} years old`);
+
+const age = 23;
+// age >= 18
+//   ? console.log("I like to drink wine")
+//   : console.log("I like to drink water");
+
+const drink = age >= 18 ? "wine" : "water";
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = "wine";
+} else {
+  drink2 = "water";
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+
+
+
+////////////////////////////////////
+// Coding Challenge #4
+
+/*
+Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+
+TEST DATA: Test for bill values 275, 40 and 430
+
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+
+GOOD LUCK 😀
+*/
+
+// must be ternery operator not allowed to use if/else
+// vrng    tip%
+// 50-300   15%
+// 300+    20%
+// 275, 40, 430
+
+// if (billValue < 50) {
+//   console.log(`${tip}%`);
+// } else if (50 <= billValue && billValue < 300) {
+//   tip = 15;
+//   console.log(`${tip}%`);
+// } else if (300 <= billValue) {
+//   tip = 20;
+//   console.log(`${tip}%`);
+// }
+
+const billValue = 40;
+
+tip = billValue < 50 ? 0 : 15;
+tip = billValue >= 300 ? 20 : tip;
+
+tipRate = tip / 100;
+tipValue = tipRate * billValue;
+console.log(`${tipValue}% divided by 100 is ${tipRate}`);
+tipValue = billValue * tipRate;
+console.log(`$${billValue} multiplied by ${tipRate} is $${tipValue}`);
+finalBill = tipValue + billValue;
+console.log(
+  `Total bill with tip is $${finalBill}. With a check due of $${billValue}`
+);
