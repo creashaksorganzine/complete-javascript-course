@@ -1,4 +1,5 @@
-/*let js = "amaazing";
+/*
+let js = "amaazing";
 console.log(40 + 8 + 23 - 10);
 
 console.log("Jonas");
@@ -17,7 +18,7 @@ let person = 'jonas'
 let PI = 3.1415;
 
 //	One line notes can come after a double slash
-/*	 Multiline
+	 Multiline
 		notes
 			come
 				between
@@ -109,12 +110,12 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
-*/
+
 
 ////////////////////////////////////
 // Coding Challenge #1
 
-/*
+
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
 
 1. Store Mark's and John's mass and height in variables
@@ -162,8 +163,8 @@ console.log(`String
 multiple
 lines`);
 
-*/
-/*
+
+
 const age = 12;
 if (age >= 18) {
   console.log("Sarah is eligible for a drivers license");
@@ -171,7 +172,7 @@ if (age >= 18) {
   console.log('Sarah is inelligible for a drivers license"');
 }
 
-/*
+
 if (`${isTrue}`) {
   {
     `${valueIfTrue}`;
@@ -181,8 +182,8 @@ if (`${isTrue}`) {
     `${valueIfFalse}`;
   }
 }
-*/
-/*
+
+
 const birthYear = 2012;
 
 let century;
@@ -192,12 +193,12 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
-*/
+
 
 ////////////////////////////////////
 // Coding Challenge #2
 
-/*
+
 Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
 
 1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
@@ -206,9 +207,9 @@ Use the BMI example from Challenge #1, and the code you already wrote, and impro
 HINT: Use an if/else statement 😉
 
 GOOD LUCK 😀
-*/
 
-/*
+
+
 const massMark = 95;
 const heightMark = 1.88;
 const massJohn = 85;
@@ -228,8 +229,8 @@ if (markHigherBMI) {
 
 console.log(`${higherBMI}'s BMI is higher that ${lowerBMI}'s`);
 console.log(`John's BMI is ${BMIJohn}, & Marks BMI is ${BMIMark}`);
-*/
-/*
+
+
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
@@ -304,9 +305,9 @@ if (favorite === 23) {
   console.log("Number is not 23 or 7 or 9");
 }
 if (favorite !== 23) console.log("Why no 23?");
-*/
 
-/*
+
+
 let firstName = "Sarah";
 let hasDriversLicense = false;
 let hasGoodVision = false;
@@ -330,8 +331,8 @@ if ((hasDriversLicense = true) && (hasGoodVision = true));
     console.log(`${firstName} cannot legally drive because they ${badDriver}`);
   }
 }
-*/
-/*
+
+
 const hasDriversLicense = true; // A
 const hasGoodVision = true; // B
 
@@ -379,12 +380,12 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
   console.log('Someone else should drive...');
 }
-*/
+
 
 ////////////////////////////////////
 // Coding Challenge #3
 
-/*
+
 There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
 
 1. Calculate the average score for each team, using the test data below
@@ -397,9 +398,9 @@ TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
 TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
-GOOD LUCK 😀 */
+GOOD LUCK 😀 
 
-/*
+
 // let dolphins;
 // let koalas;
 // let gameOne;
@@ -494,9 +495,9 @@ if (!eliminationRound) {
     `The tournament winner is ${tournamentWinner} with ${tournamentDelta} average points over the ${tournamentLoser}`
   );
 }
-*/
 
-/*
+
+
 console.log();
 
 const day = "wednesday";
@@ -522,11 +523,11 @@ switch (day) {
   default:
     console.log("Not a valid day!");
 }
-*/
+
 
 // these two do the same thing
 
-/*
+
 const day = "friday";
 
 if (day === "monday") {
@@ -543,8 +544,8 @@ if (day === "monday") {
 } else {
   console.log("Not a valid day!");
 }
-*/
-/*
+
+
 3 + 4;
 1941;
 true && false && !false;
@@ -577,12 +578,10 @@ console.log(drink2);
 
 console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
 
-
-
 ////////////////////////////////////
 // Coding Challenge #4
 
-/*
+
 Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
 
 1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
@@ -594,7 +593,7 @@ HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
 HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
 
 GOOD LUCK 😀
-*/
+
 
 // must be ternery operator not allowed to use if/else
 // vrng    tip%
@@ -612,17 +611,27 @@ GOOD LUCK 😀
 //   console.log(`${tip}%`);
 // }
 
-const billValue = 40;
+const billValue = 500;
 
 tip = billValue < 50 ? 0 : 15;
 tip = billValue >= 300 ? 20 : tip;
 
 tipRate = tip / 100;
 tipValue = tipRate * billValue;
-console.log(`${tipValue}% divided by 100 is ${tipRate}`);
+console.log(`${tipValue}% divided by 100% is ${tipRate}`);
 tipValue = billValue * tipRate;
 console.log(`$${billValue} multiplied by ${tipRate} is $${tipValue}`);
 finalBill = tipValue + billValue;
 console.log(
   `Total bill with tip is $${finalBill}. With a check due of $${billValue}`
 );
+
+// // ...A = book answer
+// billValue <= 300 && billValue >= 50 ? billValue * 0.15 : billValue * 0.2;
+// console.log(
+//   `The bill was ${billValue}, the tip was ${tip}, and the total value ${
+//     billValue + tip
+//   }`
+// );
+
+*/
