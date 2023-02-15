@@ -1,11 +1,11 @@
-/*
-let js = "amaazing";
+
+let js = "amazing";
 console.log(40 + 8 + 23 - 10);
 
 console.log("Jonas");
 console.log(23);
 
-let firstName = "Madtilida";
+// let firstName = "Madtilida";
 
 console.log(firstName);
 console.log(firstName);
@@ -18,11 +18,11 @@ let person = 'jonas'
 let PI = 3.1415;
 
 //	One line notes can come after a double slash
-	 Multiline
+/*	 Multiline
 		notes
 			come
 				between
-					these
+					these*/
 
 console.log(PI)
 
@@ -65,7 +65,7 @@ job = 'teacher';
 
 lastName = 'Schmedtmann';
 console.log(lastName);
-
+/*
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2020;
@@ -110,12 +110,12 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
-
+*/
 
 ////////////////////////////////////
 // Coding Challenge #1
 
-
+/*
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
 
 1. Store Mark's and John's mass and height in variables
@@ -126,23 +126,25 @@ TEST DATA 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1
 TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 
 GOOD LUCK 😀
+*/
 
-const massMark = 95;
-const heightMark = 1.88;
-const massJohn = 85;
-const heightJohn = 1.76;
 
-const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / heightJohn ** 2;
-const markHigherBMI = BMIMark > BMIJohn;
+// const massMark = 95;
+// const heightMark = 1.88;
+// const massJohn = 85;
+// const heightJohn = 1.76;
 
-console.log(BMIMark, BMIJohn, markHigherBMI);
+// const BMIMark = massMark / heightMark ** 2;
+// const BMIJohn = massJohn / heightJohn ** 2;
+// const markHigherBMI = BMIMark > BMIJohn;
 
-const firstName = "Jonas";
-const job = "teacher";
-const birthYear = 1991;
-const year = 2037;
+// console.log(BMIMark, BMIJohn, markHigherBMI);
 
+// const firstName = "Jonas";
+// const job = "teacher";
+// const birthYear = 1991;
+// const year = 2037;
+/*
 const jonas =
   "I'm " + firstName + ", a " + (year - birthYear) + " year old " + job + "!";
 console.log(jonas);
@@ -182,7 +184,7 @@ if (`${isTrue}`) {
     `${valueIfFalse}`;
   }
 }
-
+*
 
 const birthYear = 2012;
 
@@ -193,12 +195,12 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
-
+*/
 
 ////////////////////////////////////
 // Coding Challenge #2
 
-
+/*
 Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
 
 1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
@@ -207,9 +209,9 @@ Use the BMI example from Challenge #1, and the code you already wrote, and impro
 HINT: Use an if/else statement 😉
 
 GOOD LUCK 😀
+*/
 
-
-
+/*
 const massMark = 95;
 const heightMark = 1.88;
 const massJohn = 85;
@@ -229,7 +231,7 @@ if (markHigherBMI) {
 
 console.log(`${higherBMI}'s BMI is higher that ${lowerBMI}'s`);
 console.log(`John's BMI is ${BMIJohn}, & Marks BMI is ${BMIMark}`);
-
+*/
 
 const massMark = 78;
 const heightMark = 1.69;
@@ -385,7 +387,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 ////////////////////////////////////
 // Coding Challenge #3
 
-
+/*
 There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
 
 1. Calculate the average score for each team, using the test data below
@@ -399,7 +401,7 @@ TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 GOOD LUCK 😀 
-
+*/
 
 // let dolphins;
 // let koalas;
@@ -581,7 +583,7 @@ console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
 ////////////////////////////////////
 // Coding Challenge #4
 
-
+/*
 Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
 
 1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
@@ -593,7 +595,7 @@ HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
 HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
 
 GOOD LUCK 😀
-
+*/
 
 // must be ternery operator not allowed to use if/else
 // vrng    tip%
@@ -634,4 +636,4 @@ console.log(
 //   }`
 // );
 
-*/
+

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Developer Skills & Editor Setup</title>
+    <title>Developer Skills & Editor Setup!!!</title>
     <style>
       body {
         height: 100vh;
         display: flex;
         align-items: center;
-        background: linear-gradient(to top left, #28b487, #7dd56f);
+        background: linear-gradient(to top left, #665c54, #282828);
       }
       h1 {
         font-family: sans-serif;
@@ -21,10 +21,47 @@
         text-align: center;
         color: white;
       }
+
+      .time {
+        display: flex;
+        flex-direction: row;
+        padding: 2px;
+        margin: 2px;
+      }
+
+      .date {
+        display: flex;
+        flex-direction: row;
+        padding: 2px;
+        margin: 2px;
+      }
+
+      .dtg {
+        display: flex;
+        flex-direction: row;
+        color: aqua;
+        padding: 2px;
+        margin: 2px;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
-    <h1>Developer Skills & Editor Setup</h1>
+    <div class="container">
+      <h1>Developer Skills & Editor Setup!!!</h1>
+      <div class="dtg" id="dtg">
+        <!-- <div class="date" id="date">
+          <div class="year" id="year">year</div>
+          <div class="month" id="month">month</div>
+          <div class="day" id="day">day</div>
+        </div> -->
+        <div class="time" id="time">
+          <div class="hrs" id="hrs">hrs</div>
+          <div class="min" id="min">min</div>
+          <div class="sec" id="sec">sec</div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
