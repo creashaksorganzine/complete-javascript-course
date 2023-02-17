@@ -1,15 +1,7 @@
 // Remember, we're gonna use strict mode in all scripts now!
 'use strict';
-/*
-const x = '23';
-if (x === 23) console.log(23);
 
-const clacAge = birthYear => 2037 - birthYear;
-
-console.log(clacAge(1990));
-*/
-
-// Running Clock
+// Running Clock Serial
 function pad2(number) {
   return (number < 10 ? '0' : '') + number;
 }
@@ -29,6 +21,8 @@ function upDateTime() {
   display.innerText = `${year}${month}${day} - ${hrs}:${min}:${sec}`;
 }
 setInterval(upDateTime, 1000);
+
+// Long Date
 
 const longDate = document.getElementById('longDate');
 
@@ -67,7 +61,15 @@ function currentDateLong() {
 
 setInterval(currentDateLong(), 1000);
 
-// setInterval(updateLongDate, 1000);
+/*
+const x = '23';
+if (x === 23) console.log(23);
+
+const clacAge = birthYear => 2037 - birthYear;
+
+console.log(clacAge(1990));
+*/
+
 // PROBLEM:
 // We work for a company building a smart home thermometer. Our most recent task is thise: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
 /*
