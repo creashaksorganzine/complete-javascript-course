@@ -4,9 +4,7 @@
 function pad2(number) {
   return (number < 10 ? '0' : '') + number;
 }
-
 const display = document.getElementById('time');
-
 function upDateTime() {
   const date = new Date();
 
@@ -20,6 +18,71 @@ function upDateTime() {
   display.innerText = `${year}${month}${day} - ${hrs}:${min}:${sec}`;
 }
 setInterval(upDateTime, 1000);
+// refactored ??
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let guess = null;
+let score = 20;
+let highScore = 0;
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
+const updateScore = function (score) {
+  document.querySelector('.score').textContent = score;
+};
+const updateHighScore = function () {};
+const updateNumber = function (number) {
+  document.querySelector('.number').textContent = number;
+};
+const updateGuess = function () {};
+const updateHighscore = function () {
+  document.querySelector('.highscore').textContent = highScore;
+};
+document.querySelector('.check').addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
+
+  // no input
+  if (!guess) {
+    displayMessage('No Number!');
+
+    // player wins
+  } else if (guess === secretNumber) {
+    displayMessage('Correct Number!');
+    updateNumber(secretNumber);
+    document.querySelector('body').style.backgroundColor = '#d65d0e';
+    document.querySelector('.number').style.width = '30rem';
+
+    // update highscore
+    if (score > highScore) {
+      highScore = score;
+      updateHighscore();
+    }
+
+    // guess is wrong
+  } else if (guess !== secretNumber) {
+    if (score > 1) {
+      displayMessage(guess > secretNumber ? 'Too High!' : 'Too Low!');
+      score--;
+      updateScore(score);
+    } else {
+      displayMessage('You Lose!');
+      updateScore(0);
+    }
+  }
+});
+console.log(secretNumber);
+document.querySelector('.again').addEventListener('click', function () {
+  let score = 20;
+  document.querySelector('.score').textContent = score;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.guess').value = null;
+  console.log(document.querySelector('.guess').value);
+  document.querySelector('.number').textContent = '?';
+  displayMessage('Start guessing...');
+  document.querySelector('body').style.backgroundColor = '#3c3836';
+  document.querySelector('.number').style.width = '15rem';
+  console.log(secretNumber);
+});
 
 // Long Date
 
@@ -73,12 +136,75 @@ setInterval(upDateTime, 1000);
 // console.log(document.querySelector('.guess').value);
 
 // define random secret number
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
+// let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-let guess = null;
-let score = 20;
-let highScore = 0;
-// Functions
+// let guess = null;
+// let score = 20;
+// let highScore = 0;
+// // Functions
+// const displayMessage = function (message) {
+//   document.querySelector('.message').textContent = message;
+// };
+
+// const updateScore = function () {};
+// const updateHighScore = function () {};
+// const updateNumber = function () {};
+// const updateGuess = function () {};
+
+// document.querySelector('.check').addEventListener('click', function () {
+//   const guess = Number(document.querySelector('.guess').value);
+//   console.log(guess, typeof guess);
+
+//   // no input
+//   if (!guess) {
+//     // document.querySelector('.message').textContent = 'No Number!';
+//     displayMessage('No Number!');
+//     // player wins
+//   } else if (guess === secretNumber) {
+//     // document.querySelector('.message').textContent = 'Correct Number!';
+//     displayMessage('Correct Number!');
+//     document.querySelector('.number').textContent = secretNumber;
+
+//     document.querySelector('body').style.backgroundColor = '#d65d0e';
+//     document.querySelector('.number').style.width = '30rem';
+
+//     if (score > highScore) {
+//       highScore = score;
+//       document.querySelector('.highscore').textContent = highScore;
+//     }
+
+//     // guess is wrong
+//   } else if (guess !== secretNumber) {
+//     if (score > 1) {
+//       // document.querySelector('.message').textContent =
+//       //   guess > secretNumber ? 'Too High!' : 'Too Low!';
+//       displayMessage(guess > secretNumber ? 'Too High!' : 'Too Low!');
+//       score--;
+//       document.querySelector('.score').textContent = score;
+//     } else {
+//       // document.querySelector('.message').textContent = 'You Lose!';
+//       displayMessage('You Lose!');
+//       document.querySelector('.score').textContent = 0;
+//     }
+//   }
+// });
+
+// console.log(secretNumber);
+
+// // game reset
+// document.querySelector('.again').addEventListener('click', function () {
+//   let score = 20;
+//   document.querySelector('.score').textContent = score;
+//   secretNumber = Math.trunc(Math.random() * 20) + 1;
+//   document.querySelector('.guess').value = null;
+//   console.log(document.querySelector('.guess').value);
+//   document.querySelector('.number').textContent = '?';
+//   displayMessage('Start guessing...');
+//   document.querySelector('body').style.backgroundColor = '#3c3836';
+//   document.querySelector('.number').style.width = '15rem';
+//   console.log(secretNumber);
+// });
+
 // const noNumber = function (guess) {
 //   if (!guess) {
 //     document.querySelector('.message').textContent = 'No Number!';
@@ -118,55 +244,6 @@ let highScore = 0;
 //   document.querySelector('.message').textContent = score;
 // };
 
-// Check Button
-/**/
-
-document.querySelector('.check').addEventListener('click', function () {
-  const guess = Number(document.querySelector('.guess').value);
-  console.log(guess, typeof guess);
-
-  // no input
-  if (!guess) {
-    document.querySelector('.message').textContent = 'No Number!';
-
-    // player wins
-  } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = 'Correct Number!';
-    document.querySelector('.number').textContent = secretNumber;
-
-    document.querySelector('body').style.backgroundColor = '#d65d0e';
-    document.querySelector('.number').style.width = '30rem';
-
-    if (score > highScore) {
-      highScore = score;
-      document.querySelector('.highscore').textContent = highScore;
-    }
-
-    // guess too high
-  } else if (guess > secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = 'Too High!';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'You Loose!';
-      document.querySelector('.score').textContent = 0;
-    }
-
-    // guess too low
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = 'Too Low!';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'You Loose!';
-      document.querySelector('.score').textContent = 0;
-    }
-  }
-});
-
-console.log(secretNumber);
 // my function attempt ???
 // if (noNumber(guess, secretNumber)) {
 // } else if (correctNumber(guess, secretNumber)) {
@@ -178,16 +255,28 @@ console.log(secretNumber);
 // updateScore();
 /**/
 
-// game reset
-document.querySelector('.again').addEventListener('click', function () {
-  let score = 20;
-  document.querySelector('.score').textContent = score;
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector('.guess').value = null;
-  console.log(document.querySelector('.guess').value);
-  document.querySelector('.number').textContent = '?';
-  document.querySelector('.message').textContent = 'Start guessing...';
-  document.querySelector('body').style.backgroundColor = '#3c3836';
-  document.querySelector('.number').style.width = '15rem';
-  console.log(secretNumber);
-});
+//     // guess too high
+//   } else if (guess > secretNumber) {
+//     if (score > 1) {
+//       document.querySelector('.message').textContent = 'Too High!';
+//       score--;
+//       document.querySelector('.score').textContent = score;
+//     } else {
+//       document.querySelector('.message').textContent = 'You Loose!';
+//       document.querySelector('.score').textContent = 0;
+//     }
+
+//     // guess too low
+//   } else if (guess < secretNumber) {
+//     if (score > 1) {
+//       document.querySelector('.message').textContent = 'Too Low!';
+//       score--;
+//       document.querySelector('.score').textContent = score;
+//     } else {
+//       document.querySelector('.message').textContent = 'You Loose!';
+//       document.querySelector('.score').textContent = 0;
+//     }
+//   }
+// });
+// Check Button
+/**/
