@@ -1,0 +1,143 @@
+/* COLORS
+#282828
+#3c3836
+#504945
+#665c54
+#7c6f64
+#8f3f71
+#af3a03
+#d65d0e
+#fe8019
+#b8bb26
+#98971a
+#83a598
+#8ec07c
+#729fcf
+#4c9fcf
+#d3869b
+#d65d0e
+#ebdbb2
+#d5c4a1
+#bdae93
+#a89984
+#928374
+*/
+
+* {
+  background-color: #3c3836;
+  color: #8ec07c;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  border-style: dashed;
+  padding: 10px;
+  margin: 10px;
+  padding: 2%;
+  margin: 1%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  border-style: dashed;
+  border-color: red;
+  justify-content: flex-start;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  border-style: dashed;
+  border-color: green;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 50px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  border-style: dashed;
+  border-color: orange;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  border-style: dashed;
+  border-color: yellow;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  border-style: dashed;
+  border-color: coral;
+  padding: 10px;
+  margin: 10px;
+  width: 180px;
+  justify-content: center;
+  font-size: 40px;
+  border-radius: 10px;
+  background-color: #665c54;
+  color: #729fcf;
+  width: 180px;
+}
+
+.button:hover {
+  background-color: #282828;
+}
+
+.button:active {
+  background-color: #282828;
+  box-shadow: inset -2px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border-style: dashed;
+  border-color: aqua;
+  max-width: 20%;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  align-items: left;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-style: dashed;
+  border-color: blue;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  border-style: dashed;
+  border-color: purple;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 10px;
+  margin: 10px;
+}
