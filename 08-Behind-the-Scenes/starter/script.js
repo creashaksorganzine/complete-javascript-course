@@ -1,5 +1,26 @@
 'use strict';
 
+// const openai = new OpenAI(prompt('Enter your OpenAI API key'));
+
+// const prompt = 'Once upon a time';
+// const model = 'davinci';
+// const maxTokens = 100;
+// const temperature = 0.5;
+
+// openai
+//   .complete({
+//     prompt,
+//     model,
+//     maxTokens,
+//     temperature,
+//   })
+//   .then(response => {
+//     console.log(response.data.choices[0].text);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
+
 // console.log(array);
 // const addScore = function (x) {
 //   x;
@@ -149,3 +170,52 @@
 // }
 
 // const x = first();
+
+// const, let, var hoisting examples
+// (var is not used anymore)
+// var is undefined when hoisted
+console.log(me);
+// console.log(job);
+// console.log(birthYear);
+
+var me = 'Jonas';
+let job = 'teacher';
+const birthYear = 1991;
+
+// console.log(me);
+// console.log(job);
+// console.log(birthYear);
+
+console.log(addDecl(2, 3));
+// console.log(addExpr(2, 3));
+// console.log(addArrow(2, 3));
+
+// Functions
+function addDecl(a, b) {
+  return a + b;
+}
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => a + b;
+
+// Example
+if (!numProducts) deleteShopppingCart();
+
+var numProducts = 10;
+
+function deleteShopppingCart() {
+  console.log('All products deleted!');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(y === window.y);
+console.log(z === window.z);
+
+// this keyword
+console.log(this);

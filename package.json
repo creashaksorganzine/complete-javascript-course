@@ -1,5 +1,10 @@
 {
   "devDependencies": {
     "prettier": "2.8.4"
+  },
+  "dependencies": {
+    "express.js": "^1.0.0",
+    "sql": "^0.78.0",
+    "sqlite3": "^5.1.4"
   }
 }
